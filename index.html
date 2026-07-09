@@ -223,23 +223,6 @@
   .quick-grid .card h3{ font-size: 16px; }
   .quick-grid .card p.desc{ font-size: 13.5px; }
 
-  /* ---------- ODDS & ENDS (3-up) ---------- */
-  .odds-grid{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: 800px){
-    .odds-grid{ grid-template-columns: 1fr; }
-  }
-  .odds-grid .card .role{ color: var(--muted); }
-  .odds-grid .card .tag{
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-    margin-bottom: 2px;
-    display: block;
-  }
-
   /* ---------- FEATURED PROJECT ---------- */
   .featured-eyebrow{
     font-family: var(--mono);
@@ -324,7 +307,7 @@
     padding: 48px;
     display:flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 28px;
   }
@@ -378,7 +361,7 @@
 <section class="hero">
   <div class="hero-eyebrow">TECHNICAL DESIGNER</div>
   <h1 class="hero-title">Tony Magson</h1>
-  <p class="lede">I design, build, and implement systems and features. This is a collection of some of my best work</p>
+  <p class="lede">Honor Roll student in KPU Entertainment arts program. Lifelong game developer</p>
 </section>
 
 <section class="section" id="quick-builds">
@@ -439,53 +422,6 @@
       </div>
       <p class="desc">Physics based game. High score chasing with basic controls. 2D gameplay with 3D assets, Team of 3</p>
       <a class="play-link" href="https://momoring64.itch.io/rocketeer" target="_blank" rel="noopener">Download on itch.io</a>
-    </article>
-
-  </div>
-</section>
-
-<section class="section" id="odds-and-ends">
-  <div class="section-head">
-    <h2>Non-Game Work</h2>
-    <p class="section-subtitle">Smaller, focused pieces of work</p>
-  </div>
-
-  <div class="grid odds-grid">
-
-    <!-- Odd 1: Level Design -->
-    <article class="card">
-      <div class="thumb">
-        <span class="glyph">[ SCREENSHOT ]</span>
-      </div>
-      <div>
-        <span class="tag">LEVEL DESIGN</span>
-        <h3>Spark Level</h3>
-      </div>
-      <p class="desc">[Short description — what the level teaches or tests, layout approach, tools used (whitebox/Unreal/Unity), and what you're proudest of.]</p>
-    </article>
-
-    <!-- Odd 2: Narrative -->
-    <article class="card">
-      <div class="thumb">
-        <span class="glyph">[ SCREENSHOT ]</span>
-      </div>
-      <div>
-        <span class="tag">NARRATIVE</span>
-        <h3>Narrative Side Quest</h3>
-      </div>
-      <p class="desc">[Short description — the story or dialogue system, branching structure, tone, and any tools used (e.g. Ink, Yarn Spinner, custom).]</p>
-    </article>
-
-    <!-- Odd 3: Documentation -->
-    <article class="card">
-      <div class="thumb">
-        <span class="glyph">[ DOCUMENT ]</span>
-      </div>
-      <div>
-        <span class="tag">DOCUMENTATION</span>
-        <h3>Upcoming game GDD</h3>
-      </div>
-      <p class="desc">[Short description — GDD excerpt, system spec, or onboarding doc. What it covers and why it's a good writing sample. Link to PDF/Doc if available.]</p>
     </article>
 
   </div>
