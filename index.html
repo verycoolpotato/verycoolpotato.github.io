@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tony Magson — Technical Game Designer</title>
-<meta name="description" content="Technical design portfolio — systems, tools, and mechanics across shipped and prototype titles.">
+<meta name="description" content="Personal portfolio — game design and technical design projects.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +12,12 @@
 
 <style>
   :root{
-    --bg: #FAFAF7;
-    --panel: #F1F0EB;
-    --ink: #14161A;
-    --muted: #6B6E76;
-    --line: #DEDDD5;
-    --accent: #2F5FED;
-    --accent-dim: #E7ECFD;
+    --bg: #1A1B1E;
+    --panel: #232427;
+    --ink: #EDECE7;
+    --muted: #9B9CA3;
+    --line: #333438;
+    --accent: #E3A73B;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
     --display: 'Space Grotesk', sans-serif;
     --body: 'Inter', sans-serif;
@@ -50,18 +47,12 @@
     html{ scroll-behavior: auto; }
   }
 
-  .wrap{
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
-
   /* ---------- NAV ---------- */
   header.site{
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(250,250,247,0.88);
+    background: rgba(26,27,30,0.88);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line);
   }
@@ -97,7 +88,7 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    padding: 96px 32px 72px;
+    padding: 88px 32px 64px;
     max-width: 1120px;
     margin: 0 auto;
     border-bottom: 1px solid var(--line);
@@ -106,85 +97,35 @@
     font-family: var(--mono);
     font-size: 13px;
     color: var(--accent);
-    display:flex;
-    align-items:center;
-    gap: 10px;
-    margin-bottom: 22px;
-  }
-  .hero-eyebrow .dot{
-    width: 7px; height: 7px;
-    background: var(--accent);
-    display:inline-block;
-    border-radius: 1px;
+    margin-bottom: 20px;
   }
   h1.hero-title{
     font-family: var(--display);
     font-weight: 600;
-    font-size: clamp(40px, 6vw, 68px);
-    line-height: 1.03;
+    font-size: clamp(38px, 6vw, 60px);
+    line-height: 1.05;
     letter-spacing: -0.01em;
-    margin: 0 0 24px;
-    max-width: 15ch;
+    margin: 0 0 18px;
   }
   .hero p.lede{
-    font-size: 18px;
+    font-size: 17px;
     color: var(--muted);
-    max-width: 56ch;
-    margin: 0 0 36px;
-  }
-  .hero-specs{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-    margin-top: 40px;
-  }
-  .hero-specs div{
-    background: var(--bg);
-    padding: 16px 18px;
-  }
-  .hero-specs .k{
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 6px;
-  }
-  .hero-specs .v{
-    font-family: var(--body);
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  @media (max-width: 720px){
-    .hero-specs{ grid-template-columns: repeat(2, 1fr); }
+    max-width: 54ch;
+    margin: 0;
   }
 
   /* ---------- SECTION HEADS ---------- */
-  .section{ padding: 88px 32px; max-width: 1120px; margin: 0 auto; }
+  .section{ padding: 72px 32px; max-width: 1120px; margin: 0 auto; }
   .section + .section{ border-top: 1px solid var(--line); }
   .section-head{
-    display:flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 48px;
-    flex-wrap: wrap;
+    margin-bottom: 40px;
   }
   .section-head h2{
     font-family: var(--display);
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     margin: 0;
     letter-spacing: -0.01em;
-  }
-  .section-head .tag{
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: 0.04em;
   }
 
   /* ---------- PROJECT GRID ---------- */
@@ -201,10 +142,10 @@
 
   .card{
     background: var(--bg);
-    padding: 28px;
+    padding: 26px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
     position: relative;
     transition: background .15s ease;
   }
@@ -224,11 +165,11 @@
   .thumb .corner{
     position:absolute;
     width: 14px; height: 14px;
-    border: 2px solid var(--ink);
+    border: 2px solid var(--accent);
     opacity: 0;
     transition: opacity .15s ease;
   }
-  .card:hover .thumb .corner{ opacity: 0.35; }
+  .card:hover .thumb .corner{ opacity: 0.55; }
   .thumb .corner.tl{ top: 10px; left: 10px; border-right: none; border-bottom: none; }
   .thumb .corner.tr{ top: 10px; right: 10px; border-left: none; border-bottom: none; }
   .thumb .corner.bl{ bottom: 10px; left: 10px; border-right: none; border-top: none; }
@@ -242,7 +183,7 @@
 
   .card h3{
     font-family: var(--display);
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 600;
     margin: 0;
   }
@@ -276,10 +217,10 @@
   .skills-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 36px;
   }
   @media (max-width: 800px){
-    .skills-grid{ grid-template-columns: 1fr; gap: 32px; }
+    .skills-grid{ grid-template-columns: 1fr; gap: 28px; }
   }
   .skill-group h4{
     font-family: var(--mono);
@@ -287,45 +228,38 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--accent);
-    margin: 0 0 16px;
+    margin: 0 0 14px;
   }
   .skill-group ul{
     list-style: none;
     margin: 0; padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px;
   }
   .skill-group li{
-    display:flex;
-    justify-content: space-between;
     font-size: 14.5px;
     border-bottom: 1px solid var(--line);
-    padding-bottom: 10px;
-  }
-  .skill-group li span.lvl{
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted);
+    padding-bottom: 9px;
   }
 
   /* ---------- CONTACT ---------- */
   .contact-panel{
     background: var(--panel);
     border: 1px solid var(--line);
-    padding: 56px;
+    padding: 48px;
     display:flex;
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 28px;
   }
   .contact-panel h2{
     font-family: var(--display);
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 600;
-    margin: 0 0 12px;
-    max-width: 18ch;
+    margin: 0 0 10px;
+    max-width: 20ch;
   }
   .contact-panel p{
     color: var(--muted);
@@ -335,16 +269,13 @@
   .contact-links{
     display:flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     font-family: var(--mono);
     font-size: 14px;
   }
   .contact-links a{
     text-decoration: none;
-    display:flex;
-    align-items:center;
-    gap: 10px;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     border-bottom: 1px solid transparent;
     transition: border-color .15s ease, color .15s ease;
   }
@@ -354,7 +285,7 @@
   }
 
   footer{
-    padding: 32px;
+    padding: 28px;
     text-align: center;
     font-family: var(--mono);
     font-size: 12px;
@@ -376,34 +307,14 @@
 </header>
 
 <section class="hero">
-  <div class="hero-eyebrow"><span class="dot"></span>AVAILABLE FOR WORK</div>
-  <h1 class="hero-title">Systems people trust to hold up under play.</h1>
-  <p class="lede">I'm a technical game designer — I build the mechanics, tools, and rule-systems underneath the games you see. This is a record of that work: seven projects, spanning combat systems, live tools, and full designs.</p>
-
-  <div class="hero-specs">
-    <div>
-      <div class="k">Focus</div>
-      <div class="v">Systems &amp; tools design</div>
-    </div>
-    <div>
-      <div class="k">Engines</div>
-      <div class="v">Unity, Unreal, custom</div>
-    </div>
-    <div>
-      <div class="k">Shipped titles</div>
-      <div class="v">4</div>
-    </div>
-    <div>
-      <div class="k">Based in</div>
-      <div class="v">[Your City]</div>
-    </div>
-  </div>
+  <div class="hero-eyebrow">JUNIOR TECHNICAL DESIGNER</div>
+  <h1 class="hero-title">Tony Magson</h1>
+  <p class="lede">I design and build the systems underneath games — combat, tools, and progression. This is a collection of student projects, jams, and personal work from the last few years.</p>
 </section>
 
 <section class="section" id="work">
   <div class="section-head">
-    <h2>Selected work</h2>
-    <span class="tag">07 PROJECTS — 2021–2026</span>
+    <h2>Projects</h2>
   </div>
 
   <div class="grid">
@@ -416,13 +327,13 @@
       </div>
       <div>
         <h3>[Game Title 01]</h3>
-        <span class="role">Lead Combat Systems Designer</span>
+        <span class="role">Combat System Design</span>
       </div>
-      <p class="desc">[One or two sentences on the core system you built — e.g. a stagger/posture combat loop, the data-driven ability framework behind it, and the problem it solved for the team.]</p>
+      <p class="desc">[What the system does — e.g. a stagger/posture combat loop — and one thing you learned building it.]</p>
       <div class="meta">
         <span>Unreal Engine 5</span>
-        <span>PC / Console</span>
-        <span>Shipped 2025</span>
+        <span>PC</span>
+        <span>2025</span>
       </div>
     </article>
 
@@ -434,13 +345,13 @@
       </div>
       <div>
         <h3>[Game Title 02]</h3>
-        <span class="role">Technical Designer — Tools</span>
+        <span class="role">Editor Tooling</span>
       </div>
-      <p class="desc">[Describe an internal tool you built for the design team — what it let non-programmers do, and the time it saved on iteration.]</p>
+      <p class="desc">[A small tool you built for a team or yourself — what it let you do faster.]</p>
       <div class="meta">
         <span>Unity</span>
-        <span>Editor Tooling</span>
-        <span>Shipped 2024</span>
+        <span>Editor Tool</span>
+        <span>2024</span>
       </div>
     </article>
 
@@ -452,13 +363,13 @@
       </div>
       <div>
         <h3>[Game Title 03]</h3>
-        <span class="role">Systems Designer</span>
+        <span class="role">Progression System</span>
       </div>
-      <p class="desc">[Cover an economy, crafting, or progression system: the ruleset, the balancing approach, and how it held up in playtests.]</p>
+      <p class="desc">[A crafting, economy, or leveling system you designed — the ruleset and how you tested it.]</p>
       <div class="meta">
-        <span>Custom engine</span>
-        <span>Mobile</span>
-        <span>Shipped 2023</span>
+        <span>Godot</span>
+        <span>PC</span>
+        <span>2024</span>
       </div>
     </article>
 
@@ -470,13 +381,13 @@
       </div>
       <div>
         <h3>[Game Title 04]</h3>
-        <span class="role">AI &amp; Encounter Designer</span>
+        <span class="role">Enemy AI &amp; Encounters</span>
       </div>
-      <p class="desc">[Explain an enemy behavior tree or encounter-scripting system — how designers authored encounters without touching code.]</p>
+      <p class="desc">[An enemy behavior or encounter-scripting system — how it worked, what made it fun to fight.]</p>
       <div class="meta">
         <span>Unreal Engine 5</span>
-        <span>PC</span>
         <span>Prototype</span>
+        <span>2023</span>
       </div>
     </article>
 
@@ -488,13 +399,13 @@
       </div>
       <div>
         <h3>[Game Title 05]</h3>
-        <span class="role">Technical Designer — UI Systems</span>
+        <span class="role">UI Systems</span>
       </div>
-      <p class="desc">[Describe a data-driven UI/UX system: how it stayed in sync across localization, platforms, or live content updates.]</p>
+      <p class="desc">[A menu, HUD, or data-driven UI system — what problem it solved.]</p>
       <div class="meta">
         <span>Unity</span>
-        <span>Cross-platform</span>
-        <span>Shipped 2022</span>
+        <span>PC / Mobile</span>
+        <span>2023</span>
       </div>
     </article>
 
@@ -506,13 +417,13 @@
       </div>
       <div>
         <h3>[Game Title 06]</h3>
-        <span class="role">Level Scripting &amp; Puzzle Systems</span>
+        <span class="role">Puzzle &amp; Level Scripting</span>
       </div>
-      <p class="desc">[Cover a puzzle-logic or scripting layer that let level designers build without engineering support, plus a specific puzzle you're proud of.]</p>
+      <p class="desc">[A puzzle-logic system, plus a specific puzzle from it you're proud of.]</p>
       <div class="meta">
         <span>Godot</span>
-        <span>PC / Switch</span>
-        <span>Shipped 2021</span>
+        <span>PC</span>
+        <span>2022</span>
       </div>
     </article>
 
@@ -524,9 +435,9 @@
       </div>
       <div>
         <h3>[Game Title 07]</h3>
-        <span class="role">Game Jam — Solo Technical Design</span>
+        <span class="role">Game Jam — Solo</span>
       </div>
-      <p class="desc">[Note the jam theme, the timeframe, and the one system you're most proud of building solo under pressure.]</p>
+      <p class="desc">[The jam theme, the timeframe, and the one system you built solo under pressure.]</p>
       <div class="meta">
         <span>Unity</span>
         <span>48hr Jam</span>
@@ -539,36 +450,32 @@
 
 <section class="section" id="skills">
   <div class="section-head">
-    <h2>Toolkit</h2>
-    <span class="tag">SKILLS — SELF-RATED</span>
+    <h2>Skills</h2>
   </div>
 
   <div class="skills-grid">
     <div class="skill-group">
       <h4>Design</h4>
       <ul>
-        <li>Systems &amp; economy design <span class="lvl">EXPERT</span></li>
-        <li>Combat &amp; encounter design <span class="lvl">EXPERT</span></li>
-        <li>Level scripting <span class="lvl">ADVANCED</span></li>
-        <li>Narrative systems <span class="lvl">FAMILIAR</span></li>
+        <li>Systems &amp; mechanics design</li>
+        <li>Combat &amp; encounter design</li>
+        <li>Level scripting</li>
       </ul>
     </div>
     <div class="skill-group">
       <h4>Engineering</h4>
       <ul>
         <li>C# / Unity</li>
-        <li>Blueprints / C++ (Unreal)</li>
+        <li>Blueprints (Unreal)</li>
         <li>GDScript / Godot</li>
-        <li>Python (tools &amp; pipelines)</li>
       </ul>
     </div>
     <div class="skill-group">
-      <h4>Process</h4>
+      <h4>Currently learning</h4>
       <ul>
-        <li>Design documentation</li>
+        <li>C++ / Unreal</li>
         <li>Playtest instrumentation</li>
-        <li>Live balancing / telemetry</li>
-        <li>Cross-discipline pairing</li>
+        <li>Live balancing &amp; telemetry</li>
       </ul>
     </div>
   </div>
@@ -577,14 +484,11 @@
 <section class="section" id="contact">
   <div class="contact-panel">
     <div>
-      <h2>Let's build the next system together.</h2>
-      <p>Open to full-time, contract, and collaboration inquiries. Reply within a day or two.</p>
+      <h2>Contact Me</h2>
     </div>
     <div class="contact-links">
-      <a href="mailto:hello@tonymagson.dev">[hello@tonymagson.dev]</a>
-      <a href="https://github.com/[yourhandle]">github.com/[yourhandle]</a>
+      <a href="mailto:hello@tonymagson.dev">[arandmagson@gmail.com]</a>
       <a href="https://linkedin.com/in/[yourhandle]">linkedin.com/in/[yourhandle]</a>
-      <a href="[resume.pdf]">Download résumé →</a>
     </div>
   </div>
 </section>
