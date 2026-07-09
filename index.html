@@ -138,9 +138,7 @@
     flex-direction: column;
     gap: 16px;
     position: relative;
-    transition: background .15s ease;
   }
-  .card:hover{ background: var(--panel); }
 
   .thumb{
     aspect-ratio: 16/9;
@@ -152,20 +150,6 @@
     justify-content:center;
     overflow: hidden;
   }
-  .card:hover .thumb{ background: var(--bg); }
-  .thumb .corner{
-    position:absolute;
-    width: 14px; height: 14px;
-    border: 2px solid var(--accent);
-    opacity: 0;
-    transition: opacity .15s ease;
-    z-index: 1;
-  }
-  .card:hover .thumb .corner{ opacity: 0.55; }
-  .thumb .corner.tl{ top: 10px; left: 10px; border-right: none; border-bottom: none; }
-  .thumb .corner.tr{ top: 10px; right: 10px; border-left: none; border-bottom: none; }
-  .thumb .corner.bl{ bottom: 10px; left: 10px; border-right: none; border-top: none; }
-  .thumb .corner.br{ bottom: 10px; right: 10px; border-left: none; border-top: none; }
   .thumb .glyph{
     font-family: var(--mono);
     font-size: 12px;
@@ -263,7 +247,6 @@
   .featured-media .thumb{
     aspect-ratio: 16/9;
   }
-  .featured-media .thumb .corner{ opacity: 0.35; }
   .featured-body h3{
     font-family: var(--display);
     font-size: clamp(26px, 3vw, 34px);
@@ -395,7 +378,6 @@
     <!-- Quick 1 -->
     <article class="card">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <img src="BLR_SC.png" alt="Big League Rampage gameplay screenshot">
       </div>
       <div>
@@ -408,7 +390,6 @@
     <!-- Quick 2 -->
     <article class="card">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <img src="TER_SC.png" alt="The Eight Rank gameplay screenshot">
       </div>
       <div>
@@ -421,7 +402,6 @@
     <!-- Quick 3 -->
     <article class="card">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <img src="P0_SC.png" alt="Portal 0 gameplay screenshot">
       </div>
       <div>
@@ -434,7 +414,6 @@
     <!-- Quick 4 -->
     <article class="card">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <img src="Rocket_SC.png" alt="Rocketeer gameplay screenshot">
       </div>
       <div>
@@ -458,7 +437,6 @@
     <!-- Odd 1: Level Design -->
     <article class="card">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <span class="glyph">[ SCREENSHOT ]</span>
       </div>
       <div>
@@ -471,7 +449,6 @@
     <!-- Odd 2: Narrative -->
     <article class="card">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <span class="glyph">[ SCREENSHOT ]</span>
       </div>
       <div>
@@ -484,7 +461,6 @@
     <!-- Odd 3: Documentation -->
     <article class="card">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <span class="glyph">[ DOCUMENT ]</span>
       </div>
       <div>
@@ -501,7 +477,6 @@
   <div class="featured">
     <div class="featured-media">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <img src="ROD_SC.png" alt="Remedy or Death gameplay screenshot">
       </div>
     </div>
@@ -529,7 +504,6 @@
   <div class="featured">
     <div class="featured-media">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <img src="TVW_SC.png" alt="The Veil Walker gameplay screenshot">
       </div>
     </div>
@@ -557,7 +531,6 @@
   <div class="featured">
     <div class="featured-media">
       <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <img src="Onslaught_SC.png" alt="Onslaught gameplay screenshot">
       </div>
     </div>
