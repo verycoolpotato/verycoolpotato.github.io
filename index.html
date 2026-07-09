@@ -194,6 +194,20 @@
     padding: 4px 8px;
     color: var(--muted);
   }
+  .play-link{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s ease;
+    align-self: flex-start;
+  }
+  .play-link:hover{ border-bottom-color: var(--accent); }
+  .play-link::after{ content: "→"; }
 
   /* ---------- QUICK BUILDS ---------- */
   .quick-grid{
@@ -385,6 +399,7 @@
         <span class="role">Programmer, Designer, Tech Designer</span>
       </div>
       <p class="desc">Constrained to one button. 2D, physics based. Team of 3</p>
+      <a class="play-link" href="https://bryan-goh.itch.io/big-league-rampage" target="_blank" rel="noopener">Play on itch.io</a>
     </article>
 
     <!-- Quick 2 -->
@@ -397,6 +412,7 @@
         <span class="role">Programmer, Designer, Tech Designer</span>
       </div>
       <p class="desc">Constrained to atari control scheme. Ambitious small scale metroidvania, 2D platformer, Team of 3</p>
+      <a class="play-link" href="https://verycoolpotato.itch.io/the-eighth-rank" target="_blank" rel="noopener">Download on itch.io</a>
     </article>
 
     <!-- Quick 3 -->
@@ -409,6 +425,7 @@
         <span class="role">Programmer, Designer</span>
       </div>
       <p class="desc">Demake game, 2D portal game, Team of 4</p>
+      <a class="play-link" href="https://charaznable0225.itch.io/portal-0" target="_blank" rel="noopener">Download on itch.io</a>
     </article>
 
     <!-- Quick 4 -->
@@ -421,6 +438,7 @@
         <span class="role">Programmer, Project Manager</span>
       </div>
       <p class="desc">Physics based game. High score chasing with basic controls. 2D gameplay with 3D assets, Team of 3</p>
+      <a class="play-link" href="https://momoring64.itch.io/rocketeer" target="_blank" rel="noopener">Download on itch.io</a>
     </article>
 
   </div>
@@ -496,6 +514,7 @@
         <span>2026</span>
         <span class="grade">Grade: 95%</span>
       </div>
+      <a class="play-link" href="https://verycoolpotato.itch.io/remedy-or-death" target="_blank" rel="noopener">Download on itch.io</a>
     </div>
   </div>
 </section>
@@ -523,6 +542,7 @@
         <span>2026</span>
         <span class="grade">Grade: 100%</span>
       </div>
+      <a class="play-link" href="https://bryan-goh.itch.io/veilwalker" target="_blank" rel="noopener">Download on itch.io</a>
     </div>
   </div>
 </section>
@@ -551,6 +571,7 @@
         <span>2026</span>
         <span class="grade">Grade: 96%</span>
       </div>
+      <a class="play-link" href="https://bryan-goh.itch.io/onslaught" target="_blank" rel="noopener">Download on itch.io</a>
     </div>
   </div>
 </section>
@@ -563,13 +584,9 @@
     <div class="contact-links">
       <a href="mailto:arandmagson@gmail.com">arandmagson@gmail.com</a>
       <a href="https://linkedin.com/in/[yourhandle]">linkedin.com/in/[yourhandle]</a>
+      <a href="https://verycoolpotato.itch.io/" target="_blank" rel="noopener">verycoolpotato.itch.io/</a>
     </div>
   </div>
 </section>
-
-<footer>
-  © 2026 Tony Magson. Built and hosted on GitHub Pages.
-</footer>
-
 </body>
 </html>
