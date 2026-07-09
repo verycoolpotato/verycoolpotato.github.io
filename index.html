@@ -198,6 +198,93 @@
     color: var(--muted);
   }
 
+  /* ---------- QUICK BUILDS ---------- */
+  .quick-grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 900px){
+    .quick-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 520px){
+    .quick-grid{ grid-template-columns: 1fr; }
+  }
+  .quick-grid .card{ padding: 20px; gap: 12px; }
+  .quick-grid .card h3{ font-size: 16px; }
+
+  /* ---------- FEATURED PROJECT ---------- */
+  .featured-eyebrow{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+  .featured{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 800px){
+    .featured{ grid-template-columns: 1fr; }
+  }
+  .featured:nth-of-type(even) .featured-media{ order: 2; }
+  .featured-media .thumb{
+    aspect-ratio: 4/3;
+  }
+  .featured-media .thumb .corner{ opacity: 0.35; }
+  .featured-body h3{
+    font-family: var(--display);
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 600;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .featured-body .role{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 18px;
+  }
+  .featured-body p.desc{
+    font-size: 15.5px;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+  .featured-body ul.highlights{
+    list-style: none;
+    margin: 0 0 22px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .featured-body ul.highlights li{
+    font-size: 14.5px;
+    color: var(--ink);
+    padding-left: 18px;
+    position: relative;
+  }
+  .featured-body ul.highlights li::before{
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .featured-body .meta{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .featured-body .meta span{
+    border: 1px solid var(--line);
+    padding: 4px 8px;
+    color: var(--muted);
+  }
+
   /* ---------- SKILLS ---------- */
   .skills-grid{
     display: grid;
@@ -292,139 +379,158 @@
   <p class="lede">I design, build, and implement systems and features. This is a collection of projects and personal work from the last few years.</p>
 </section>
 
-<section class="section" id="work">
+<section class="section" id="quick-builds">
   <div class="section-head">
-    <h2>Projects</h2>
+    <h2>2-Week Builds</h2>
   </div>
 
-  <div class="grid">
+  <div class="grid quick-grid">
 
-    <!-- Project 1 -->
+    <!-- Quick 1 -->
     <article class="card">
+      <div class="thumb">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <span class="glyph">[ SCREENSHOT ]</span>
+      </div>
+      <div>
+        <h3>[Game Title A]</h3>
+        <span class="role">Solo — Combat Prototype</span>
+      </div>
+      <div class="meta">
+        <span>Unity</span>
+        <span>2 weeks</span>
+      </div>
+    </article>
+
+    <!-- Quick 2 -->
+    <article class="card">
+      <div class="thumb">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <span class="glyph">[ SCREENSHOT ]</span>
+      </div>
+      <div>
+        <h3>[Game Title B]</h3>
+        <span class="role">Solo — Puzzle System</span>
+      </div>
+      <div class="meta">
+        <span>Godot</span>
+        <span>2 weeks</span>
+      </div>
+    </article>
+
+    <!-- Quick 3 -->
+    <article class="card">
+      <div class="thumb">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <span class="glyph">[ SCREENSHOT ]</span>
+      </div>
+      <div>
+        <h3>[Game Title C]</h3>
+        <span class="role">Team of 2 — Movement Test</span>
+      </div>
+      <div class="meta">
+        <span>Unreal Engine 5</span>
+        <span>2 weeks</span>
+      </div>
+    </article>
+
+    <!-- Quick 4 -->
+    <article class="card">
+      <div class="thumb">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <span class="glyph">[ SCREENSHOT ]</span>
+      </div>
+      <div>
+        <h3>[Game Title D]</h3>
+        <span class="role">Solo — Game Jam Entry</span>
+      </div>
+      <div class="meta">
+        <span>Unity</span>
+        <span>2 weeks</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section" id="featured-1">
+  <div class="featured">
+    <div class="featured-media">
       <div class="thumb">
         <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <span class="glyph">[ SCREENSHOT / GIF ]</span>
       </div>
-      <div>
-        <h3>[Game Title 01]</h3>
-        <span class="role">Combat System Design</span>
-      </div>
-      <p class="desc">[What the system does — e.g. a stagger/posture combat loop — and one thing you learned building it.]</p>
+    </div>
+    <div class="featured-body">
+      <div class="featured-eyebrow">FEATURED PROJECT — 01</div>
+      <h3>[Game Title 01]</h3>
+      <span class="role">Combat System Design</span>
+      <p class="desc">[What the game is about and what your role covered — one or two sentences setting the scene before you get into specifics.]</p>
+      <ul class="highlights">
+        <li>[The core system you built — e.g. a stagger/posture combat loop.]</li>
+        <li>[A specific design problem you solved and how you approached it.]</li>
+        <li>[Something you learned or would do differently next time.]</li>
+      </ul>
       <div class="meta">
         <span>Unreal Engine 5</span>
         <span>PC</span>
         <span>2025</span>
       </div>
-    </article>
+    </div>
+  </div>
+</section>
 
-    <!-- Project 2 -->
-    <article class="card">
+<section class="section" id="featured-2">
+  <div class="featured">
+    <div class="featured-media">
       <div class="thumb">
         <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <span class="glyph">[ SCREENSHOT / GIF ]</span>
       </div>
-      <div>
-        <h3>[Game Title 02]</h3>
-        <span class="role">Editor Tooling</span>
-      </div>
-      <p class="desc">[A small tool you built for a team or yourself — what it let you do faster.]</p>
-      <div class="meta">
-        <span>Unity</span>
-        <span>Editor Tool</span>
-        <span>2024</span>
-      </div>
-    </article>
-
-    <!-- Project 3 -->
-    <article class="card">
-      <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <span class="glyph">[ SCREENSHOT / GIF ]</span>
-      </div>
-      <div>
-        <h3>[Game Title 03]</h3>
-        <span class="role">Progression System</span>
-      </div>
-      <p class="desc">[A crafting, economy, or leveling system you designed — the ruleset and how you tested it.]</p>
+    </div>
+    <div class="featured-body">
+      <div class="featured-eyebrow">FEATURED PROJECT — 02</div>
+      <h3>[Game Title 02]</h3>
+      <span class="role">Progression &amp; Economy Design</span>
+      <p class="desc">[What the game is about and what your role covered — one or two sentences setting the scene before you get into specifics.]</p>
+      <ul class="highlights">
+        <li>[The crafting, economy, or leveling system you designed.]</li>
+        <li>[How you balanced or tested it — playtests, spreadsheets, telemetry.]</li>
+        <li>[The outcome — what changed once it was in players' hands.]</li>
+      </ul>
       <div class="meta">
         <span>Godot</span>
         <span>PC</span>
         <span>2024</span>
       </div>
-    </article>
+    </div>
+  </div>
+</section>
 
-    <!-- Project 4 -->
-    <article class="card">
+<section class="section" id="featured-3">
+  <div class="featured">
+    <div class="featured-media">
       <div class="thumb">
         <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <span class="glyph">[ SCREENSHOT / GIF ]</span>
       </div>
-      <div>
-        <h3>[Game Title 04]</h3>
-        <span class="role">Enemy AI &amp; Encounters</span>
-      </div>
-      <p class="desc">[An enemy behavior or encounter-scripting system — how it worked, what made it fun to fight.]</p>
+    </div>
+    <div class="featured-body">
+      <div class="featured-eyebrow">FEATURED PROJECT — 03</div>
+      <h3>[Game Title 03]</h3>
+      <span class="role">Enemy AI &amp; Encounter Design</span>
+      <p class="desc">[What the game is about and what your role covered — one or two sentences setting the scene before you get into specifics.]</p>
+      <ul class="highlights">
+        <li>[The enemy behavior or encounter-scripting system you built.]</li>
+        <li>[What made a specific encounter fun to fight, in your words.]</li>
+        <li>[Any tools you built so others could author encounters too.]</li>
+      </ul>
       <div class="meta">
         <span>Unreal Engine 5</span>
         <span>Prototype</span>
         <span>2023</span>
       </div>
-    </article>
-
-    <!-- Project 5 -->
-    <article class="card">
-      <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <span class="glyph">[ SCREENSHOT / GIF ]</span>
-      </div>
-      <div>
-        <h3>[Game Title 05]</h3>
-        <span class="role">UI Systems</span>
-      </div>
-      <p class="desc">[A menu, HUD, or data-driven UI system — what problem it solved.]</p>
-      <div class="meta">
-        <span>Unity</span>
-        <span>PC / Mobile</span>
-        <span>2023</span>
-      </div>
-    </article>
-
-    <!-- Project 6 -->
-    <article class="card">
-      <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <span class="glyph">[ SCREENSHOT / GIF ]</span>
-      </div>
-      <div>
-        <h3>[Game Title 06]</h3>
-        <span class="role">Puzzle &amp; Level Scripting</span>
-      </div>
-      <p class="desc">[A puzzle-logic system, plus a specific puzzle from it you're proud of.]</p>
-      <div class="meta">
-        <span>Godot</span>
-        <span>PC</span>
-        <span>2022</span>
-      </div>
-    </article>
-
-    <!-- Project 7 -->
-    <article class="card">
-      <div class="thumb">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <span class="glyph">[ SCREENSHOT / GIF ]</span>
-      </div>
-      <div>
-        <h3>[Game Title 07]</h3>
-        <span class="role">Game Jam — Solo</span>
-      </div>
-      <p class="desc">[The jam theme, the timeframe, and the one system you built solo under pressure.]</p>
-      <div class="meta">
-        <span>Unity</span>
-        <span>48hr Jam</span>
-        <span>2026</span>
-      </div>
-    </article>
-
+    </div>
   </div>
 </section>
 
