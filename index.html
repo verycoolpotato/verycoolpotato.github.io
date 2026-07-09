@@ -47,7 +47,7 @@
     html{ scroll-behavior: auto; }
   }
 
-  /* ---------- NAV ---------- */
+  /* ---------- HEADER ---------- */
   header.site{
     position: sticky;
     top: 0;
@@ -59,7 +59,6 @@
   .nav{
     display:flex;
     align-items:center;
-    justify-content: space-between;
     padding: 18px 32px;
     max-width: 1120px;
     margin: 0 auto;
@@ -71,20 +70,6 @@
     color: var(--muted);
   }
   .nav .mark strong{ color: var(--ink); font-weight: 500; }
-  .nav ul{
-    list-style: none;
-    display: flex;
-    gap: 28px;
-    margin: 0; padding: 0;
-    font-family: var(--mono);
-    font-size: 13px;
-  }
-  .nav ul a{
-    text-decoration: none;
-    color: var(--muted);
-    transition: color .15s ease;
-  }
-  .nav ul a:hover{ color: var(--ink); }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -298,18 +283,13 @@
 <header class="site">
   <div class="nav">
     <div class="mark"><strong>TONY MAGSON</strong> / tech design</div>
-    <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-eyebrow">JUNIOR TECHNICAL DESIGNER</div>
+  <div class="hero-eyebrow">TECHNICAL DESIGNER</div>
   <h1 class="hero-title">Tony Magson</h1>
-  <p class="lede">I design and build the systems underneath games — combat, tools, and progression. This is a collection of student projects, jams, and personal work from the last few years.</p>
+  <p class="lede">I design, build, and implement systems and features. This is a collection of projects and personal work from the last few years.</p>
 </section>
 
 <section class="section" id="work">
@@ -487,7 +467,7 @@
       <h2>Contact Me</h2>
     </div>
     <div class="contact-links">
-      <a href="mailto:hello@tonymagson.dev">[arandmagson@gmail.com]</a>
+      <a href="mailto:arandmagson@gmail.com">arandmagson@gmail.com</a>
       <a href="https://linkedin.com/in/[yourhandle]">linkedin.com/in/[yourhandle]</a>
     </div>
   </div>
